@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css' // <--- ESTA LINHA TRAZ O ESTILO/DESIGN
+import './globals.css' // <--- IMPORTANTE
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Finance Flow',
-  description: 'Gestão financeira simples',
+  description: 'Gestão Financeira',
 }
 
 export default function RootLayout({
