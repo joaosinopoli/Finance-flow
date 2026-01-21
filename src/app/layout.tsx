@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
-import Sidebar from '@/components/Sidebar'
+import './globals.css' // <--- ESTA LINHA TRAZ O ESTILO/DESIGN
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'FinanceFlow',
-  description: 'Sistema de Gestão Financeira',
+  title: 'Finance Flow',
+  description: 'Gestão financeira simples',
 }
 
 export default function RootLayout({
@@ -17,12 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} bg-gray-50 text-gray-900 flex`}>
-        <Sidebar />
-        <main className="flex-1 ml-64 min-h-screen p-8">
-          {children}
-        </main>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
